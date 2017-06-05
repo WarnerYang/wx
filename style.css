@@ -361,6 +361,14 @@ h3 a{
 	background: #607d8b;
 	margin-right: 20px;
 }
+.forkme img{
+	display: none;
+	position: fixed;
+	top: 40px; 
+	right: 0;
+	border: 0;
+	z-index: 997;
+}
 
 @media(min-width:768px) {
 	.img-box {
@@ -388,19 +396,7 @@ h3 a{
 	.menu_bar a {
     	padding: 0px 10px;
 	}
+	.forkme img{
+		display: inline;
+	}
 }
-/*滚动条美化*/
-/*::-webkit-scrollbar{  
-	width: 5px;
-}  
-*/
-/*定义滚动条轨道 内阴影+圆角*/  
-/*::-webkit-scrollbar-track{  
-	background-color: #f4f5f6;
-}  
-*/
-/*定义滑块 内阴影+圆角*/  
-/*::-webkit-scrollbar-thumb{  
-	background-color: #aaacb4;
-	border-radius: 20px;
-} */
