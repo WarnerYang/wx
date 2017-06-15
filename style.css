@@ -2,6 +2,7 @@ html,body{
 	padding: 0;
 	margin: 0; 
     color: #545454;
+    background: #F2F4F6;
 	font-family: -apple-system,SF UI Text,Arial,PingFang SC,Hiragino Sans GB,Microsoft YaHei,WenQuanYi Micro Hei,sans-serif;
 }
 * {
@@ -125,7 +126,6 @@ a:active,a:hover {
 	text-align: center;
 	font-size: 15px;
 	background: rgba(0,0,0,0.3);
-	border-radius: 0 8px 8px 0; 
 	z-index: 997;
 }
 .fiexd_btn a{
@@ -147,23 +147,26 @@ ul{
 }	
 #container {
 	margin-top: 60px;
-	padding: 0 20px;
+	padding: 0 15px;
 }
 #container li{
-	height: 150px;
-	position: relative;
-	margin-top: 40px;
-	overflow: hidden;
+    height: 200px;
+    position: relative;
+    margin-top: 20px;
+    overflow: hidden;
 }
 .txt-info{
 	color: #000;
 }
 .img-box{
-	height: 100%;
-	overflow: hidden;
-	line-height: 150px;
-	text-align: center;
-	background-color: #f1f1f1;
+    height: 100%;
+    overflow: hidden;
+    line-height: 150px;
+    text-align: center;
+    background-color: #fff;
+    border-radius: 5px;
+    padding: 8px;
+    box-shadow: 0 1px 2px 0 rgba(0,0,0,.05);
 }
 .img-box img{
 	width: 100%;
@@ -173,38 +176,40 @@ ul{
 	-ms-transition: all, 0.5s;
 	/*filter: blur(20px);*/
 }
-li:hover img {
+.img-box img:hover {
 	-webkit-transform: scale(1.2);
 	-moz-transition: scale(1.2);
 	-o-transition: scale(1.2);
 	-ms-transition: scale(1.2);
 }
 .txt-box{
-	width: 100%;
-	position: absolute;
-	bottom: 0;
-	background: linear-gradient(360deg,rgb(0, 0, 0),rgba(0, 0, 0, 0));
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    padding: 8px;
+    border-radius: 0 0 5px 5px;
+    background: #fff;
+    box-shadow: 0 1px 2px 0 rgba(0,0,0,.05);
 }
 h3{
-	font-size: 16px;
-	font-weight: normal;
-	margin: 0;
-	padding: 10px 5px 0 5px;
+    font-size: 16px;
+    font-weight: normal;
+    margin: 0;
 }
 h3 a{
-	text-decoration: none;
-	color: #fff;
-	display: inline-block;
-	width: 100%;
+    text-decoration: none;
+    color: #333;
+    display: inline-block;
+    width: 100%;
 }
 .s-p{
 	font-size: 12px;
-	color: #eeeeee;
-	padding:5px;
+    color: #BDBDBD;
+    padding: 2px 0;
 }
 .s-p a{
 	text-decoration: none;
-	color: #eeeeee;
+	color: #BDBDBD;
 }
 .s2{
 	padding-left: 10px;
@@ -230,7 +235,7 @@ h3 a{
 	line-height: 30px;
 	position: relative;
 	top: -15px;
-	background: #fff;
+	background: #f2f4f6;
 	padding: 0 5px;
 }
 .more i{
@@ -307,6 +312,7 @@ h3 a{
 } 
 .lite .img-box {
 	background: none;
+	box-shadow: none;
 }
 .lite .img-box h3{
 	padding: 5px;
@@ -322,6 +328,7 @@ h3 a{
 	width: 100%;
 	position: static;
 	background: none;
+	box-shadow: none;
 }
 .lite .s-p {
 	position: relative;
@@ -372,16 +379,23 @@ h3 a{
 
 @media(min-width:768px) {
 	.img-box {
+		padding: 8px;
 		width: 380px;
-		padding: 0;
 	}
 	.txt-box {
 		width: 380px;
 		margin: 0 auto;
 		padding: 0;
+		padding: 8px;
+	}
+	.fiexd_btn{
+		left: inherit;
+		right: 0;
+		bottom: 50px;
+    	
 	}
 	#container li{
-		height: 200px;
+		height: 250px;
 		margin: 10px 0;
 		float: left;
 		width: 50%;

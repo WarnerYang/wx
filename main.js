@@ -65,7 +65,7 @@ $(document).ready(function() {
 		$(".menu_bar").removeClass('open');
 		$(".cr").addClass('hide');
 		$(".menu_more").removeClass('is-active');
-		if ($(document).scrollTop()>=$(document).height()-$(window).height()&&$(document).scrollTop()>0) {
+		if ($(document).scrollTop() + 200 >= $(document).height() - $(window).height() && $(document).scrollTop() > 0) {
 			var item = $("#container li:last").attr("item");
 			var page = $("#container li:last").attr("page");
 			var name = $("title").text();
