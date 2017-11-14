@@ -7,3 +7,5 @@
 在线网址 http://yanghuaqiang.com/wx/index.html
 
 欢迎 Start
+
+我有个大胆的想法。做成小程序如何？  // 2017/11/14
