@@ -25,11 +25,11 @@ a:active,a:hover {
 	white-space: normal !important;
 }
 .tips{
-	height: 32px;
+	height: 78px;
+	line-height: 78px;
 	color: #fff;
 	text-align: center;
 	font-size: 14px;
-	line-height: 33px;
 	position: fixed;
 	bottom: 50%;
 	left: 50%;
@@ -150,7 +150,7 @@ ul{
 	padding: 0 15px;
 }
 #container li{
-    height: 200px;
+    height: 233px;
     position: relative;
     margin-top: 20px;
     overflow: hidden;
@@ -165,8 +165,6 @@ ul{
     text-align: center;
     background-color: #fff;
     border-radius: 5px;
-    padding: 8px;
-    box-shadow: 0 1px 2px 0 rgba(0,0,0,.05);
 }
 .img-box img{
 	width: 100%;
@@ -189,10 +187,9 @@ ul{
     padding: 8px;
     border-radius: 0 0 5px 5px;
     background: #fff;
-    box-shadow: 0 1px 2px 0 rgba(0,0,0,.05);
 }
 h3{
-    font-size: 16px;
+    font-size: 18px;
     font-weight: normal;
     margin: 0;
 }
@@ -205,7 +202,7 @@ h3 a{
 .s-p{
 	font-size: 12px;
     color: #BDBDBD;
-    padding: 2px 0;
+    padding: 6px 0;
 }
 .s-p a{
 	text-decoration: none;
@@ -238,14 +235,13 @@ h3 a{
 	background: #f2f4f6;
 	padding: 0 5px;
 }
-.more i{
-	background: url("loading.gif") no-repeat center;
+/*.more i{
 	display: inline-block;
 	width: 30px;
 	height: 100%;
 	background-size: 60%;
 	vertical-align: top;
-}
+}*/
 .more .text{
 	display: inline-block;
 	height: 100%;
@@ -379,14 +375,14 @@ h3 a{
 
 @media(min-width:768px) {
 	.img-box {
-		padding: 8px;
+		/*padding: 8px;*/
 		width: 380px;
 	}
 	.txt-box {
 		width: 380px;
 		margin: 0 auto;
 		padding: 0;
-		padding: 8px;
+		padding: 16px;
 	}
 	.fiexd_btn{
 		left: inherit;
@@ -395,7 +391,7 @@ h3 a{
     	
 	}
 	#container li{
-		height: 250px;
+		height: 275px;
 		margin: 10px 0;
 		float: left;
 		width: 50%;

@@ -1,11 +1,7 @@
 #### 微信文章精选
 
-数据内容来源于 http://weixin.sogou.com/
+在线体验 http://yanghuaqiang.com/wx/index.html
 
-我们只做大自然的搬运工
+我们只做大自然的搬运工，数据内容来源于 http://weixin.sogou.com/
 
-在线网址 http://yanghuaqiang.com/wx/index.html
-
-欢迎 Start
-
-我有个大胆的想法。做成小程序如何？  // 2017/11/14
+欢迎 fork start

@@ -7,7 +7,7 @@ $(document).ready(function() {
 		$("#wraper").html(obj.data);
 		setTimeout("$(document).scrollTop(obj.scroll)",1);
 	}else{
-		ajax(0,0);
+		ajax();
 	}
 
 	/*点击导航条目*/
@@ -20,7 +20,7 @@ $(document).ready(function() {
 		$(".menu_more").removeClass('is-active');
 		$(this).parent().animate({scrollLeft: ($(this).index())*63-(w/2-29)});
 		var item = $(".menu_bar>a").index(this);
-		ajax(item,0);
+		ajax(item);
 	});
 
 	/*更多菜单*/
@@ -35,7 +35,7 @@ $(document).ready(function() {
 		$(".menu_bar").removeClass('open');
 		$(".cr").addClass('hide');
 		var item = $(".menu_bar>a.active").attr('id');
-		ajax(item,0);
+		ajax(item);
 	});
 
 	/*版本切换*/
@@ -50,8 +50,8 @@ $(document).ready(function() {
 		}
 		$(".menu_bar").removeClass('open');
 		$(".cr").addClass('hide');
-		var item = $(".menu_bar>a.active").attr('id');
-		ajax(item,0);
+		var item = $(".menu_bar>a.active").index();
+		ajax(item);
 	});
 
 	/*回顶部*/
@@ -75,7 +75,7 @@ $(document).ready(function() {
 });
 
 /*请求数据*/
-function ajax(item,page){
+function ajax(item=0,page=0){
 	if(stop==true) return false;
 	if(page>14){
 		$(".more i").hide();
@@ -84,7 +84,7 @@ function ajax(item,page){
 	}
 	var vision = ($("#container").hasClass('lite'))?2:1;
 	$.ajax({
-		url: 'index.php',
+		url: 'api.php',
 		type: 'post',
 		timeout:5000,
 		dataType: 'json',
@@ -128,7 +128,7 @@ function ajax(item,page){
 			stop = false;
 			$(".more i").hide();
 			$(".more .text").text("加载失败");
-			$(".tips").text('网络异常').show().delay(3000).fadeOut();
+			$(".tips").text('服务器错误').show().delay(3000).fadeOut();
 		}
 	});
 }

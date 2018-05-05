@@ -1,11 +1,12 @@
 <?php 
-class ApiClass
+class WeChatApi
 {
 	function __construct(){
-		header('Access-Control-Allow-Origin:*'); // 指定允许其他域名访问  
-		header('Access-Control-Allow-Methods:POST,GET'); // 响应类型   
-		header('Access-Control-Allow-Headers:x-requested-with,content-type');  // 响应头设置 
+		header('Access-Control-Allow-Origin: '.$_SERVER['HTTP_ORIGIN']);
+		header('Access-Control-Allow-Methods:POST,GET');   
+		header('Access-Control-Allow-Headers:x-requested-with,content-type');
 		header("Content-type:text/html;charset=utf-8");
+
 		if(isset($_POST['item'])&&isset($_POST['vision'])){
 			$item   = trim(strip_tags($_POST['item']));
 			$vision = trim(strip_tags($_POST['vision']));//版本（1:标准，2:简版）
@@ -14,9 +15,9 @@ class ApiClass
 				$page = trim(strip_tags($_POST['page']));
 				$url = "http://weixin.sogou.com/pcindex/pc/pc_$item/$page.html";
 			}
-			$this->get_data($url,$vision);
+			return $this->get_data($url,$vision);
 		}else{
-			$this->json(0,"参数错误");
+			return $this->json(0,"参数错误");
 		}
 	}
 
@@ -51,10 +52,10 @@ class ApiClass
 			$output = preg_replace('/<img src/', "<img data-src", $output);
 		}
 		if($output){
-			$this->json(1,"获取成功",$output);
+			return $this->json(1,"获取成功",$output);
 		}else{
-			$this->json(0,"获取失败");
+			return $this->json(0,"获取失败");
 		}
 	}
 }
-new ApiClass();
+new WeChatApi();
