@@ -5,4 +5,4 @@
 - 在线体验 https://wx.yanghuaqiang.com
 > 我们只做大自然的搬运工，数据内容来源于 http://weixin.sogou.com 与本网站无关
 
-## 觉得不错就右上角 start 支持下吧
+## 觉得不错就右上角 star 支持下吧
